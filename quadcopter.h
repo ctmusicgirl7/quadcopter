@@ -3,6 +3,18 @@
 
 #include <stdint.h>
 
+/* constants
+ */
+uint8_t HEIGHT = 100;
+uint8_t MOTOR = 180;
+
+/* data struct
+ */
+struct quadcopter {
+     int8_t pitch, roll;
+     uint8_t height, fr, fl, br, bl;
+     } quad;
+
 /* get the orientation: 0 -> flat, (-)127 -> max tilt
  */
 /* leaning forwards / backwards: positive -> forwards
@@ -31,4 +43,7 @@ void setBR(uint8_t);
  */
 void setBL(uint8_t); 
 
+/* run quadcopter
+ */
+void run(struct quadcopter);
 #endif
