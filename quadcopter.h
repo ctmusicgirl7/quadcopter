@@ -2,6 +2,7 @@
 #define __QUADCOPTER_H__
 
 #include <stdint.h>
+#include <stdio.h>
 
 /* constants
  */
@@ -10,7 +11,7 @@ uint8_t MOTOR = 180;
 
 /* data struct
  */
-struct quadcopter {
+typedef struct quadcopter {
      int8_t pitch, roll;
      uint8_t height, fr, fl, br, bl;
      } quad;
